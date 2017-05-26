@@ -2,7 +2,7 @@ title: Input Output
 email: admin@iohk.io
 description: Cascading disruption
 baseurl: ""
-url: "https://iohk.io"
+url: "https://demo.iohk.djegl.in"
 include: ["_pages"]
 permalink: /:title
 twitter_username: InputOuput
