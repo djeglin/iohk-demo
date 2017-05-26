@@ -1,0 +1,190 @@
+---
+layout: page-blog
+---
+{{content}}
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <div id="middle" class="middlerow">
+        <div id="main" class=" projects_page projects_blog blog_page blog">
+
+
+
+            <div id="subheader" class="banner particles"><div id="subheader-particles"></div>
+                <div class="container">
+
+                    <div class="title_block">
+                      <h1 class=" uppercase clear"><span class="c_f00">IOHK |</span> <span class="title">Blog</span></h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="subheader-shade">
+
+            </div>
+
+            <div class="container">
+
+
+                <div class="row fader">
+
+                  {% assign show_post_cnt = 10 %}
+                  {% assign blog_post_cnt = 0 %}
+                    {% assign blog_author = '' %}
+
+
+                    {% assign blog_post_now = show_post_cnt | times:page.paging %}
+                    {% assign blog_post_max = blog_post_now | plus:show_post_cnt %}
+
+
+                    {% for post in site.posts %}
+                    {% if post.visible %}
+                    {% if post.categories contains 'blog' %}
+
+
+                    {% assign blog_post_cnt = blog_post_cnt | plus:1 %}
+
+                    {% if blog_post_cnt > blog_post_now %}
+                    {% if blog_post_cnt <= blog_post_max %}
+
+
+                    <div class="maincol blogpost col-lg-18 col-md-18 col-sm-18">
+                        <div class="post">
+
+                            <h2 class="marginb0 blogtitle"><a class="ajaxhref" href="{{ site.baseurl }}{{ post.permalink }}">{{ post.title }}</a></h2>
+                            {% if post.subtitle %}<h3 class="subtitle">{{post.subtitle}}</h3>{% endif %}
+
+                            <div class="meta clear">
+                                <div class="date inline-block"><span class=""><em class="fa fa-clock-o"></em> {{ post.date | date: '%B %d, %Y' }}</span></div> &nbsp;&nbsp;
+                                {% if post.author %}<div class="author inline-block">
+
+                                    {% for member in site.pages %}
+                                    {% if member.layout == 'member' %}
+                                    {% if member.contact == post.author %}
+                                    <em class="fa fa-user c_f00"></em>  <a class="ajaxhref" href="{{ site.baseurl }}{{ member.permalink }}{% if page.language != 'en' %}{{ page.language }}/{% endif %}">{{ member.title }}</a>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+
+                                </div> &nbsp;&nbsp; {% endif %}
+                                {% if post.readtime %}{% if post.parent != 'video' %}<div class="readtime inline-block"><em class="fa fa-bookmark"></em> {{ post.readtime }} read</div>{% endif %}{% endif %}
+                            </div>
+                            <div class="clear small"><br></div>
+
+                            {% if post.categories contains 'video' %}
+                            <div class="blog entry video">
+                            {{ post.content }}
+                            </div>
+
+                            {% else %}
+
+                            {% if post.thumbnail %}
+                            <a class="ajaxhref" href="{{ site.baseurl }}{{ post.permalink }}">
+                                <hr class="margin0 opa10" />
+                                <img src="{{ post.thumbnail }}" alt="" class="fullwidth" />
+                            </a>
+                            {% if post.noimagemargin %}
+                            {% else %}
+                            <div class="clear small"><br></div>
+                            {% endif %}
+                            {% endif %}
+
+                            <div class="blog entry">
+
+                                {% if post.onlysummary %}
+                                {{ post.content | truncatewords:post.onlysummary}} <a href="{{ site.baseurl }}{{ post.permalink }}"><span>Read more »</span></a></p>
+                                {% else %}
+                                {{ post.content }}
+                                {% endif %}
+
+                            </div>
+
+                            {% endif %}
+                            <hr class="margin0">
+
+                            <p class="text-left"><img src="/images/ccl.png" alt="" /></p>
+
+                            <div id="io_comment_area-{{ post.id }}" class="io_comment_area opened {% if post.categories contains 'video' %}video{% endif %}">
+                                <a href="{{ site.baseurl }}{{ post.permalink }}#io_comment_area" class="comment_opener"><em class="fa fa-bookmark"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 rightcol post-side">
+                        <div class="wrap">
+
+                            {% include ui-member.html item=post.author side=true %}
+
+                            <hr />
+                            {% include nav-blog.html item=post %}
+
+                            <hr />
+
+                            <div class="sharing">{% include ui-share.html item=post %}</div>
+
+                        </div>
+                    </div>
+
+                    <div class="clear post-break"><br><br></div>
+
+
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+
+
+                    <div class="maincol col-lg-18 col-md-18 col-sm-18">
+
+
+                      <div class="clear text-center">
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination pagination-lg">
+                            {% if page.paging != 0 %}
+                            <li>
+                              <a href="/blog/{{page.paging | minus:1}}" aria-label="Previous">
+                                <span aria-hidden="true"><em class="fa fa-chevron-left"></em>&nbsp; Previous</span>
+                              </a>
+                            </li>
+                            {% endif %}
+                            <!--
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                          -->
+
+
+
+                            {% if blog_post_cnt > blog_post_max %}
+                            <li>
+                              <a href="/blog/{{page.paging | plus:1}}" aria-label="Next">
+                                <span aria-hidden="true">Next &nbsp;<em class="fa fa-chevron-right"></em></span>
+                              </a>
+                            </li>
+                            {% endif %}
+                          </ul>
+                        </nav>
+
+                      </div>
+                  </div>
+
+                </div>
+            </div>
+
+            {% include nav-footer.html %}
+        </div>
+    </div>
+    {% include footer.html %}
+
+  </body>
+
+</html>

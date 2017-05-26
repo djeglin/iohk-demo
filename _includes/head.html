@@ -1,0 +1,265 @@
+{% if page.redirect %}
+<script>location.href='{{page.redirect}}';</script>
+{% endif %}
+
+<head>
+<title>{{ page.title }} - {{ site.title }}</title>
+<meta charset="utf-8">
+<meta name="description" content="{{ site.description }}">
+<meta name="keywords" content="Blockchain technology, Cryptocurrency, Open Source">
+
+{% assign urlprefix = site.baseurl %}
+
+
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="twitter:card" content="{{ page.title }}">
+<meta name="twitter:site" content="{{ site.title }}">
+<meta name="twitter:creator" content="{{ site.title }}">
+{% if page.thumbnail %}
+<meta name="twitter:image" content="{{ site.url }}{{ page.thumbnail | prepend: site.baseurl }}">
+{% else %}
+<meta name="twitter:image" content="{{ site.url }}{{ '/images/intro/home-2.jpg' | prepend: site.baseurl }}">
+{% endif %}
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.title }}">
+
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="{{site.baseurl}}{{page.permalink}}" />
+
+{% if page.thumbnail %}
+<meta property="og:image" content="{{ site.url }}{{ page.thumbnail  | prepend: site.baseurl }}" />
+{% else %}
+<meta property="og:image" content="{{ site.url }}{{ '/images/intro/home-2.jpg' | prepend: site.baseurl }}" />
+{% endif %}
+
+<meta property="og:description" content="{{site.description}}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+
+
+
+{% if site.url != "https://iohk.io" %}
+<meta name="robots" content="noindex,nofollow" />
+{% endif %}
+
+
+<script>(function(){document.documentElement.className='js'})();</script>
+<script>
+var form_submit = false;
+var lowie = false;
+var lowerie = false;
+var IE = false;
+var webglIE = true;
+var iolang = '{{ page.language }}';
+var servername = 'iohk.io';
+var requesturi = '/';
+var homeurl = '{{ site.url }}';
+var sitename = '{{ site.title }}';
+var homename = '{{ page.title | smartify }}';
+var temppath = '/js/globe/';
+var pageslug = '{{ page.slug }}';
+var teampage = 'team';
+var jobspage = 'careers';
+var projectspage = 'projects';
+
+var iolab_read_more = '{{ site.data.i18n[page.language].read_more }}';
+var iolab_link = '{{ site.data.i18n[page.language].link }}';
+var iolab_open = '{{ site.data.i18n[page.language].open }}';
+var iolab_close = '{{ site.data.i18n[page.language].close }}';
+var iolab_back = '{{ site.data.i18n[page.language].back }}';
+
+var iolab_share_on_Twitter = '{{ site.data.i18n[page.language].share_on_Twitter }}';
+var iolab_share_on_Facebook = '{{ site.data.i18n[page.language].share_on_Facebook }}';
+var iolab_share_on_LinkedIn = '{{ site.data.i18n[page.language].share_on_LinkedIn }}';
+var iolab_share_on_Google_Plus = '{{ site.data.i18n[page.language].share_on_Google_Plus }}';
+var iolab_share_on_Reddit = '{{ site.data.i18n[page.language].share_on_Reddit }}';
+
+
+</script>
+
+<link rel="icon" href="{{ '/images/favicon.ico' | prepend: urlprefix }}" type="image/x-icon">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" media="screen">
+<link rel="stylesheet" href="{{ '/css/app.0.2.css' | prepend: urlprefix }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ '/css/base.0.3999.css' | prepend: urlprefix }}" type="text/css" media="all" />
+<link rel="stylesheet" href="{{ '/css/iohk.0.91.863.css' | prepend: urlprefix }}" type="text/css" media="all" />
+<link rel="stylesheet" href="{{ '/css/print.0.3.css' | prepend: urlprefix }}" type="text/css" media="print" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C700%2C500&#038;subset=latin%2Ccyrillic&#038;ver=4.4.2" type="text/css" media="all" />
+{% if page.language == 'en' %}
+<link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+<style>
+#entry h1,#entry .h1,
+#subheader h1,#subheader .h1,.electrolize{font-family: 'Electrolize', sans-serif;text-transform: uppercase; letter-spacing: .05em}
+</style>
+{% endif %}
+<!--[if IE]>
+<script>IE = true;</script>
+<![endif]-->
+
+<!--[if lte IE 11]>
+<script>webglIE = false;</script>
+<style>#io_intro_nav {display: none !important}</style>
+<![endif]-->
+
+<!--[if lte IE 10]>
+<script src="{{ "/js/lowie.js" | prepend: site.baseurl }}"></script>
+<![endif]-->
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet"  href="{{ "/css/ie.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+<script src="{{ "/js/html5.js" | prepend: site.baseurl }}"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+<script>lowerie = true;</script>
+<script>location.href='http://iohk.io/old-browser.html';</script>
+<link rel="stylesheet"  href="{{ "/css/ieoff.css" | prepend: site.baseurl }}" type="text/css" media="all" />
+<![endif]-->
+
+<script type="text/javascript" src="{{ '/js/app/jquery-1.11.2.min.js' | prepend: urlprefix }}"></script>
+<script type="text/javascript" src="{{ '/js/app/jquery-ui.js' | prepend: urlprefix }}"></script>
+<script type="text/javascript" src="{{ '/js/app/app.js' | prepend: urlprefix }}"></script>
+
+<script id="particles_data" type="application/json">
+{
+  "particles": {
+    "number": {
+      "value": 20,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ff0000"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true,
+  "config_demo": {
+    "hide_card": false,
+    "background_color": "#b61924",
+    "background_image": "",
+    "background_position": "50% 50%",
+    "background_repeat": "no-repeat",
+    "background_size": "cover"
+  }
+}
+
+</script>
+
+
+
+<script>
+{% assign member_cnt = 0 %}
+var io_team_arr = new Array();
+{% for member in site.pages reversed %}{% if member.layout == 'member' %}
+io_team_arr[{{member_cnt}}] = new Array();
+io_team_arr[{{member_cnt}}]['key'] = '{{member.key}}';
+io_team_arr[{{member_cnt}}]['tit'] = '{% if member.prefix %}{{ member.prefix }} {% endif %}{{member.title}}{% if member.sufix %},&nbsp;{{ member.sufix }}{% endif %}';
+io_team_arr[{{member_cnt}}]['pic'] = '{{member.thumbnail}}';
+io_team_arr[{{member_cnt}}]['role'] = '{{member.role}}';
+io_team_arr[{{member_cnt}}]['loc'] = '{{member.location}}';
+{% assign member_cnt = member_cnt | plus:1 %}{% endif %}{% endfor %}
+
+</script>
+
+
+
+
+
+</head>

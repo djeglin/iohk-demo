@@ -1,0 +1,198 @@
+---
+layout: project-blog
+---
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <div id="middle" class="middle">
+        <div id="main" class=" projects_blog blog_single blog">
+
+
+            <div id="subheader" class="banner particles minititle"><div id="subheader-particles"></div>
+                <div class="container">
+                    {% include nav-sub.html %}
+                    <div class="title_block">
+                        <div class=" uppercase clear h1"><span class="c_f00">IOHK | </span> <span class="title">{{ page.parent }} <span class="extra">Blog</span></span></div>
+
+                        <!--h1 class="marginb0">{{ page.title }}</h1-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="subheader-grad"></div>
+
+            <div class="fader">
+
+
+                <div class="subnavbar">
+                    <div class="container">
+
+                                <ul class="uppercase project-nav nav navbar-nav nav-tabs">
+
+
+                                  {% assign in_member_cnt = 0 %}
+
+                                  {% for project in site.pages %}
+                                    {% if project.layout == 'project' %}
+                                    {% if page.parent == project.parent %}
+
+                                    {% include nav-sub-projects.html item=project %}
+
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+
+
+
+
+
+
+                                </ul>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="subheader-shade">
+
+                </div>
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="maincol col-lg-18 col-md-18 col-sm-18">
+
+
+                            <div class="post">
+
+                                    <div class="tab-content clear">
+                                        <div role="tabpanel" class="tab-pane active" id="post-{{page.id}}">
+
+                                            <h1 class="margin0 roboto"><a class="" href="{{ site.baseurl }}{{ post.permalink }}"><span class="title">{{ page.title }}</span></a></h1>
+
+                                            <div class="meta">
+                                                <div class="date inline-block"><span class=""><em class="fa fa-clock-o"></em> {{ page.date | date: '%B %d, %Y' }}</span></div> &nbsp;&nbsp;
+                                                {% if page.author %}<div class="author inline-block">
+
+                                                    {% for post in site.pages %}
+                                                    {% if post.layout == 'member' %}
+                                                    {% if post.contact == page.author %}
+                                                    <em class="fa fa-user c_f00"></em>  <a href="{{ site.baseurl }}{{ post.permalink }}">{{ post.title }}</a>
+                                                    {% endif %}
+                                                    {% endif %}
+                                                    {% endfor %}
+
+                                                </div> &nbsp;&nbsp; {% endif %}
+                                                {% if page.readtime %}<div class="readtime inline-block"><em class="fa fa-bookmark"></em> {{ page.readtime }} read</div> &nbsp;&nbsp; {% endif %}
+                                                <div class="comments inline-block"><a id="io-comments" href="#disqus_thread" class=""><em class="fa fa-comments"></em> {{ site.data.i18n[page.language].comments }}</a></div>
+
+
+                                            </div>
+                                            <div class="clear small"><br></div>
+
+                                            <div id="entry" class="blog entry {% if post.videothumbnail %}video{% endif %}" data-id="{{page.id}}" data-type="blog-post" data-slug="{{page.slug}}">
+                                                {{ content }}
+
+                                                {% if post.videothumbnail %}
+                                                    <a class="" href="{{ site.baseurl }}{{ post.permalink }}">
+                                                        <img src="{{ post.videothumbnail }}" alt="" class="fullwidth" />
+                                                    </a>
+                                                {% else %}
+                                                    {% if post.onlysummary %}
+                                                    {{ post.content | truncatewords:post.onlysummary}} <a href="{{ site.baseurl }}{{ post.permalink }}"><strong>Read more »</strong></a></p>
+                                                    {% else %}
+                                                    {{ post.content }}
+                                                    {% endif %}
+                                                {% endif %}
+
+                                            </div>
+
+
+
+
+                                            <div id="io_comment_area" class="io_comment_area opened">
+                                                <a href="javascript:io_class_toggle('#io_comment_area','opened')" class="comment_opener"><em class="fa fa-bookmark"></em></a>
+                                                <div id="disqus_thread"></div>
+                                            </div>
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane" id="blog">
+
+                                            {% for post in site.categories[page.parent] %}
+                                            {% if page.language == post.language %}
+                                            {% if post.visible == true %}
+                                            <div class="{{ post.slug }}">
+                                            <p class="date marginb0"><span class="c_f00">{{ post.date | date: '%B %d, %Y' }}</span> by {{ post.author }}</p>
+                                            <h2 class="margint0"><a class="" href="{{ site.baseurl }}{{ post.permalink }}{% if page.language != 'en' %}/{{ page.language }}/{% endif %}">{{ post.title }}</a></h2>
+                                            <div class="text">{{post.excerpt}}</div>
+                                            </div>
+                                            {% endif %}
+                                            {% endif %}
+                                            {% endfor %}
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="team">
+
+                                            {% for post in site.categories[page.parent] %}
+                                            {% if page.language == post.language %}
+                                            {% if post.layout == 'member' %}
+
+                                            {% include ui-member.html item=post.contact %}
+
+
+                                            {% endif %}
+                                            {% endif %}
+                                            {% endfor %}
+
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="contact">
+
+
+
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 rightcol post-side">
+                            <div class="wrap">
+
+                                {% include ui-member.html item=page.author side=true %}
+
+                                <hr />
+
+                                {% include nav-blog.html item=page %}
+
+                                <br />
+
+                                <div class="sharing">{% include ui-share.html item=page %}</div>
+
+                                <hr />
+
+                                {% include ui-networks.html %}
+
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include nav-footer.html %}
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

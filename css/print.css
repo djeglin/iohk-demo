@@ -1,0 +1,16 @@
+.topcol .tools,
+.topcol .nav-tabs,
+.rightcol,
+.noprint,
+.btn-group,
+#disqus_thread,
+.navbar,
+form,
+.profile,
+.nav{display: none !important}
+
+body{font-size:65%;}
+
+.printyes{display:block !important}
+
+.blog.entry{padding: 0}

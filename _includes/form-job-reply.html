@@ -1,0 +1,56 @@
+<br />
+
+<a href="javascript:io_class_toggle('.jobpost','applying')" class="btn btn-default apply_now_button">{{ site.data.i18n[page.language].apply_now }}</a>
+<div class="io_reply_form">
+
+	<form action="https://docs.google.com/a/iohk.io/forms/d/1NTxVYR3PoHcTft-prqZbVvZuMUdF_pR2IV9noJuFgFg/formResponse?embedded=true" method="POST"  target="hidden_iframe" onsubmit="form_submit=true;">
+
+		<iframe name="hidden_iframe" style="display:none;" onload="if(form_submit) {window.location='{{ '/application-sent/' | prepend: site.baseurl }}{% if page.language != 'en' %}{{ page.language }}/{% endif %}';}"></iframe>
+
+		<input type="hidden" name="entry.2142695191" value="{{ page.entitle }}" class="ss-q-short" id="entry_2142695191">
+		 
+	    <div class="row apply_form">
+	        <div class="col-sm-24">
+	            <div class="form-group">
+	                <label class="none">{{ site.data.i18n[page.language].name }}</label>
+	                <input type="text" name="entry.398827102" placeholder="{{ site.data.i18n[page.language].name }}" value="" size="" class="form-control text required form-control" required="required" aria-required="true" aria-invalid="false" />
+	            </div>
+	        </div>
+	        <div class="col-xs-12">
+	            <div class="form-group">
+	                <label class="none">{{ site.data.i18n[page.language].email }}</label>
+	                <input type="email" name="entry.439452573" placeholder="{{ site.data.i18n[page.language].email }}" value="" size="" class="form-control email required email form-control" required="required" aria-required="true" aria-invalid="false" />
+	            </div>
+	        </div>
+	        <div class="col-xs-12">
+	            <div class="form-group">
+	                <label class="none">{{ site.data.i18n[page.language].phone }}</label>
+	                <input type="text" name="entry.2029499419" placeholder="{{ site.data.i18n[page.language].phone }}" value="" size="" class="form-control required form-control" required="required" aria-required="true" />
+	            </div>
+	        </div>
+	        <div class="col-xs-24">
+	            <div class="form-group">
+	                <label class="none">{{ site.data.i18n[page.language].cover_letter }}</label>
+	                <textarea name="entry.1867413024" placeholder="{{ site.data.i18n[page.language].cover_letter }}" cols="40" rows="10" class="form-control textarea required" required="required"></textarea>
+	            </div>
+	        </div>
+	        <div class="col-xs-24">
+	            <div class="form-group">
+	                <label class="none">{{ site.data.i18n[page.language].cv_url }}</label>
+	                <input type="text" name="entry.353374954" placeholder="{{ site.data.i18n[page.language].cv_url }}" value="" size="" class="form-control text required form-control" required="required" id="your-name" aria-required="true" />
+	            </div>
+	        </div>
+	        <div class="col-xs-24 text-right">
+
+				<input type="hidden" name="draftResponse" value="[,,&quot;-3020729754636164255&quot;]">
+				<input type="hidden" name="pageHistory" value="0">
+				<input type="hidden" name="fvv" value="0">
+				<input type="hidden" name="fbzx" value="-3020729754636164255">
+
+	            <input type="submit" class="btn btn-default" id="btn-submit" value="{{ site.data.i18n[page.language].submit_application }}" />
+	        </div>
+	    </div>
+
+	</form>
+
+</div>

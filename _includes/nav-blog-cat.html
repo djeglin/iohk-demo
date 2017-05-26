@@ -1,0 +1,27 @@
+
+                                <div id="latest_posts" class="latest_posts cat_posts widget ">
+                                    <h6 class="uppercase electrolize">{{include.section}} on Blog</h6>
+                                    <div class="post_links">
+                                        <ul>
+                                        {% for post in site.posts %}
+                                        {% if post.visible %}
+                                        {% if post.categories contains include.section %}
+                                        <li class=""><a class="fadehref" href="{{ site.baseurl }}{{ post.permalink }}">
+                                            <strong>{{ post.title }}</strong>
+
+                                            {% for dude in site.pages %}
+                                            {% if dude.layout == 'member' %}
+                                            {% if dude.contact == post.author %}
+                                            <small class="block authors">{{ dude.title }}</small>
+                                            {% endif %}
+                                            {% endif %}
+                                            {% endfor %}
+
+                                        </a></li>
+                                        {% endif %}
+                                        {% endif %}
+                                        {% endfor %}
+                                        </ul>
+                                    </div>
+
+                                </div>

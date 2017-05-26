@@ -1,0 +1,480 @@
+---
+layout: page-team
+---
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  {% assign col = 'col-lg-4 col-md-6 col-sm-12 col-xs-12 member team-member inline-block floatnone'; %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div id="middle" class="middle">
+        <div id="main">
+
+
+
+            <div id="subheader" class="banner particles"><div id="subheader-particles"></div>
+                <div class="container">
+                    {% include nav-sub.html %}
+                    <div class="title_block">
+                        <h1 class=" uppercase clear"><span class="c_f00">IOHK | </span> <span class="title">Team</span></h1>
+                       {% include nav-team.html %}
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="subheader-grad"></div>
+
+<br>
+
+            <div class="container">
+                <div class="fader row">
+                    <div id="teamgrid" class="entry  text-center show-all">
+
+                        <div class="col-lg-8 col-md-8 col-sm-24 inline-block floatnone griditem founder executive">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash no600"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                {{ site.data.i18n[page.language].founders }}
+                                <svg height="1" width="25" class="io_dash no600"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 member">
+                                    {% include ui-member.html item='charles.hoskinson@iohk.io' %}
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 member">
+                                    {% include ui-member.html item='jeremy.wood@iohk.io' %}
+                                </div>
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-24 inline-block floatnone griditem executive">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                {{ site.data.i18n[page.language].executives }}
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 col-xs-12 member">
+                                    {% include ui-member.html item='nikos.bentenitis@iohk.io' %}
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-12 member">
+                                    {% include ui-member.html item='aggelos.kiayias@iohk.io' %}
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-12 member">
+                                    {% include ui-member.html item='clark.richards@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+
+
+                        <div class="clear"></div>
+
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 griditem research development">
+                            <div class="intertitle electrolize">
+                                <svg height="1" width="40" class="io_dash no600"><line x1="0" y1="0" x2="40" y2="0" class="line" /></svg>
+                                <span class="griditem research">{{ site.data.i18n[page.language].research }}</span>
+                                <span class="griditem amp smaller">&amp;</span>
+                                <span class="griditem development">{{ site.data.i18n[page.language].development }}</span>
+                                <svg height="1" width="40" class="io_dash no600"><line x1="0" y1="0" x2="40" y2="0" class="line" /></svg>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 griditem senior research inline-block floatnone">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Senior Research Fellows
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='philip.wadler@iohk.io' %}
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 griditem research inline-block floatnone">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Research Fellows
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='mario.larangeira@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='bernardo.david@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='peter.gazi@iohk.io' %}
+                                </div>
+
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='rafael.dowsley@iohk.io' %}
+                                </div>
+<div class="clear"><br></div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='roman.oliynykov@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='dmitry.shtukenberg@gmail.com' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+
+
+
+
+
+
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem cardano development">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Cardano
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='duncan.coutts@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='lars.bruenjes@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='philipp.kant@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='peter.thompson@iohk.io' %}
+                                </div>
+
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='darryl.mcadams@iohk.io' %}
+                                </div>
+
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='ante.kegalj@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='jens.krause@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='kristijan.saric@iohk.io' %}
+                                </div>
+
+
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='denis.shevchenko@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='jonn.mostovoy@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='arseniy.seroka@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='alex@well-typed.com' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='volkhov.mikhail@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='george.agapov@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='ivan.gromakovskii@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='alexandre_rb@protonmail.com' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='artyom.kazak@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='dmitry.kovanikov@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem ethereum-classic development">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Ethereum Classic
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12 col-xs-12 member inline-block floatnone">
+                                {% include ui-member.html item='alan.mcsherry@iohk.io' %}
+                              </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='alan.verbner@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='nicolas.tallar@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='lukasz.gasior@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='adam.smolarek@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='radek.tkaczyk@iohk.io' %}
+                                </div>
+
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem scorex development">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Scorex
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='alex.chepurnoy@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='dmitry.meshkov@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='jan.kotek@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+
+
+
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem development web">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Web Development and Operations
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='darko.mijic@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='dominik.guzei@gmail.com' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='christian.lindgren@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='daniel.friedman@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='domen.kozar@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='jacob.mitchell@iohk.io' %}
+                                </div>
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='serge.kosyrev@iohk.io' %}
+                                </div>
+
+                                                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                                                  {% include ui-member.html item='nikola.glumac@iohk.io' %}
+                                                                </div>
+
+                                                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                                                  {% include ui-member.html item='tomislav.horacek@iohk.io' %}
+                                                                </div>
+
+
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='reslav.hollos@iohk.io' %}
+                                </div>
+
+
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem research">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Cryptocurrency Diligence
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='dmytro.kaidalov@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='andrii.nastenko@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='mariia.rodinko@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='oleksiy.shevtsov@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem creative">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Creative
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='richard.wild@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='tomas.vrana@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='alexander.rukin@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem communications">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Communications
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                {% include ui-member.html item='jane.wild@iohk.io' %}
+                              </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='carlo.vicari@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='christian.seberino@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-lg-24 col-md-24 col-sm-24 inline-block floatnone griditem operations">
+                            <div class="subtitle electrolize">
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                                Operations
+                                <svg height="1" width="25" class="io_dash"><line x1="0" y1="0" x2="25" y2="0" class="line" /></svg>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='leonidas.tsagkalias@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='costas.saragkas@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='tamara.haasen@iohk.io' %}
+                                </div>
+                                <div class="col-md-4 col-sm-11 col-xs-12 member inline-block floatnone">
+                                  {% include ui-member.html item='naho.nagahara@iohk.io' %}
+                                </div>
+
+                            </div>
+                            <div class="clear"><br></div>
+                        </div>
+
+                        <div class="clear"></div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            {% include nav-footer.html %}
+        </div>
+    </div>
+    {% include footer.html %}
+
+
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+title: Input Output
+email: admin@iohk.io
+description: Cascading disruption
+baseurl: ""
+url: "https://iohk.io"
+include: ["_pages"]
+permalink: /:title
+twitter_username: InputOuput
+
+markdown: kramdown
+highlighter: rouge
+array: []
+
+languages:          ['en', 'ru', 'ja']
+language_default:   'en'
